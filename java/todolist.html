@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            width: 1000px;
+        }
+        li{
+            background-color: rgb(167, 166, 166);
+            margin: 10px;
+           
+            display: flex;
+            align-items: center;
+        }
+        input[type="checkbox"]{
+            margin-right: 10px;
+        }
+        .completed{
+            text-decoration: line-through;
+        }
+        i{
+            margin-left: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>ToDo List</h1>
+    <input type="text" id="myinput" placeholder="Enter text" value="">
+
+    <button onclick="todo()" id="button">ADD</button>
+
+    <ul id="a" style="background-color: rgb(42, 54, 17);padding: 5px;">
+
+    </ul>
+   
+    <script>
+       
+
+       let editingItem = null;
+
+        function todo(){
+            let inputfield= document.getElementById("myinput").value;
+
+            if (inputfield === "") return; 
+            const li=document.createElement("li");
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            
+            checkbox.onclick=function(){
+                if(checkbox.checked){
+                    li.classList.add("completed");
+                }
+                else{
+                    li.classList.remove("completed");
+                }
+            }
+
+            document.getElementById("a").appendChild(li);
+
+            li.appendChild(checkbox);
+
+            const textnode=document.createTextNode(inputfield);
+            li.appendChild(textnode);
+
+            let del = document.createElement('i');
+            del.className='fa fa-trash-o';
+            li.appendChild(del);
+
+            let edit = document.createElement('i');
+            edit.className='fa fa-pencil-square';
+            li.appendChild(edit);
+
+            del.onclick = function(){
+                li.remove();
+            }
+
+            edit.onclick = function(){
+                
+                editingItem = li;
+                document.getElementById('myinput').value = textnode.textContent;
+                const button = document.getElementById("button");
+                button.innerText = "CHANGE";
+
+              
+                button.onclick = function() {
+                    const newValue = document.getElementById('myinput').value;
+                    textnode.textContent = newValue;
+                    button.innerText = "ADD"; 
+                    editingItem = null;
+                    button.onclick = todo;
+                    document.getElementById('myinput').value = "";
+                }
+            }
+
+            document.getElementById("myinput").value = "";
+        }
+    </script>
+</body>
+</html>

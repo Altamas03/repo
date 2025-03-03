@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+
+    font-family: exo;
+}.nav{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: small;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nav > div{
+    
+    margin-left: 80px;
+}
+.a{
+    background-color: rgb(230, 229, 229);
+    height: 30px;
+
+}
+.a>p{
+    padding-left: 80px;
+    font-size: x-small;
+}
+.b{
+    margin-left: 80px;
+    margin-top: 30px;
+    display: flex;
+    
+}

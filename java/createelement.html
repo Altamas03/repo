@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Value Property</title>
+<style>
+    li{
+        background: #ffffff;
+        list-style: none;
+        margin: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+    
+    <input type="text" id="myInput" placeholder="Enter text" >
+
+    
+    <button onclick="todo()">Get Value</button>
+    <ul id = "a" style="background-color: rgb(217, 255, 0);padding: 10px;">
+        
+    </ul>
+
+   
+    <script>
+       
+        function todo(){
+            let inputField = document.getElementById("myInput").value;
+            const abc = document.createElement('li');
+            abc.innerHTML=inputField;
+            document.querySelector('ul').appendChild(abc);
+
+        }
+    </script>
+
+</body>
+
+</html> 
