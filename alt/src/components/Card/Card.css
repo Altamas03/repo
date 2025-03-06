@@ -1,16 +1,25 @@
+
 #card{
     background-color: grey;
     padding: 20px;
     width: 250px;
-    height: 400px;
+    height: 350px;
    
     margin-left: 50px;
     margin-top: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: row; */
     
     
 }
 
 input{
     height: 25px;
+    width: 237px;
+    margin-top: 30px;
+}
+
+#card h3{
+  text-align: center;
 }
