@@ -1,0 +1,14 @@
+#Card{
+  background: #fff;
+ 
+  width: 300px;
+  border-radius: 15px;
+  float: left;
+  margin: 20px;
+  /* text-align: center; */
+}
+body{
+  background: rgb(0, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+}

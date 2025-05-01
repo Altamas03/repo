@@ -1,0 +1,17 @@
+#full{
+    /* background-color: rgb(238, 243, 161); */
+    border: 3px solid rgb(56, 56, 56);
+    border-radius: 7px;
+    height: 320px;
+    width: 250px;
+    margin: 50px;
+}
+#two{
+    background-color: rgb(152, 150, 150);
+    height: 30px;
+    padding-bottom: 40px;
+    margin-top: 0px;
+    /* border-radius: 7px; */
+    color: azure;
+    text-align: right;
+}

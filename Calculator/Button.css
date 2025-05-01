@@ -1,0 +1,15 @@
+button{
+    /* display: block; */
+    height: 50px;
+    width: 62.5px;
+    text-align: center;
+    font-size: medium;
+   
+    /* margin-top: -10px; */
+    border: 1px solid grey;
+}
+#container{
+    display: flex;
+    margin-top: -21px;
+      
+}
